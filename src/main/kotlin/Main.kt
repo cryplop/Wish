@@ -1,7 +1,15 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+import eu.vendeli.tgbot.TelegramBot
+import kotlinx.coroutines.runBlocking
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+suspend fun main(){
+    val bot = TelegramBot("5347737744:AAG3rIQlFpLpmSCEjo6Ge2MoM03DG6njjU4","controller")
+    /**
+     * Second parameter is the package in which commands/inputs will be searched.
+     */
+
+    bot.handleUpdates()
+
+    // start long-polling listener
 }
+
+
