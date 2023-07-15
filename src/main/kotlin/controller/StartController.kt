@@ -23,7 +23,9 @@ class StartController {
         if (file.exists()) {
             message("Привет! Вот твой список!").send(user, bot)
             for (wish in File("wishlist/{${user.username}}.out").readLines()) {
+                //TO DO Добавить нумерацию в списке
                 message(wish).send(user, bot)
+                //TO DO Для каждого желания добавить кнопку УДАЛИТЬ
             }
         } else {
             message("Список подарков не найден!").send(user, bot)
