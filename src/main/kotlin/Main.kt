@@ -1,5 +1,4 @@
 import eu.vendeli.tgbot.TelegramBot
-import kotlinx.coroutines.runBlocking
 import java.sql.Connection
 import java.sql.DriverManager
 import java.sql.ResultSet
