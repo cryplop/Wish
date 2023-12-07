@@ -22,9 +22,11 @@ class StartController {
         //если файл найден, то прочитать его содержимое и вывести пользователю
         if (file.exists()) {
             message("Привет! Вот твой список!").send(user, bot)
+            var count: Int = 0
             for (wish in File("wishlist/{${user.username}}.out").readLines()) {
                 //TO DO Добавить нумерацию в списке
-                message(wish).send(user, bot)
+                count++
+                message("$count $wish").send(user, bot)
                 //TO DO Для каждого желания добавить кнопку УДАЛИТЬ
             }
         } else {
